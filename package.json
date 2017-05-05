@@ -1,0 +1,35 @@
+{
+  "name": "ts-npm-test",
+  "version": "0.0.0-development",
+  "description": "Sandbox to play around with npm setup and config ",
+  "main": "src/index.js",
+  "scripts": {
+    "commit" : "git-cz", 
+    "test": "exit 0",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/therapon/ts-npm-test.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Therapon Skoteiniotis <therapon@gmail.com> (https://github.com/therapon)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/therapon/ts-npm-test/issues"
+  },
+  "homepage": "https://github.com/therapon/ts-npm-test#readme",
+  "dependencies": {
+    "unique-random-array": "^1.0.0"
+  },
+  "devDependencies": {
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "semantic-release": "^6.3.2"
+  },
+  "czConfig": { 
+    "path" : "node_modules/cz-conventional-changelog"
+  } 
+}
