@@ -1,6 +1,6 @@
 {
   "name": "ts-npm-test",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Sandbox to play around with npm setup and config ",
   "main": "src/index.js",
   "scripts": {
