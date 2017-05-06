@@ -11,8 +11,8 @@ before_script:
 after_success:
   - ' echo $TRAVIS_BRANCH'
   - ' echo $TRAVIS_PULL_REQUEST'
-  - 'if [ $TRAVIS_BRANCH == "master" -a $TRAVIS_PULL_REQUEST = "false"]; then npm run semantic-release'
-  - 'if [ $TRAVIS_BRANCH == "development" ]; then exit 0;'
+  - 'if [ "$TRAVIS_BRANCH" == "master" -a "$TRAVIS_PULL_REQUEST" == "false"]; then npm run semantic-release fi'
+  - 'if [ "$TRAVIS_BRANCH" == "development" ]; then exit 0; fi'
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
