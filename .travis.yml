@@ -11,7 +11,8 @@ node_js:
 before_script:
   - npm prune
 after_success:
-  - npm run semantic-release
+  - 'if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false"]; then npm run semantic-release'
+  - 'if [ "$TRAVIS_BRANCH" = "development" ]; then exit 0;'
 branches:
   except:
     - /^v\d+\.\d+\.\d+$/
